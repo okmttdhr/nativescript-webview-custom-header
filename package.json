@@ -24,10 +24,10 @@
   },
   "homepage": "https://github.com/okmttdhr/nativescript-webview-custom-header#readme",
   "devDependencies": {
-    "typescript": "^2.0.3"
+    "typescript": "^1.8.10"
   },
   "dependencies": {
     "tns-core-modules": "2.2.1",
-    "tns-platform-declarations": "^2.3.0"
+    "tns-platform-declarations": "2.2.0"
   }
 }
