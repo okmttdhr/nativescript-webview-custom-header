@@ -1,20 +1,24 @@
 # nativescript-webview-custom-header
 
-## Sample App
+This is the example of implementating custom headers for WebView requests.
 
-### The first time
+(I used [alexziskind1/nativescript-oauth](https://github.com/alexziskind1/nativescript-oauth) as reference).
+
+## Structure
+
+```
+├── dist // built files
+├── index.d.ts // type definition
+├── index.ios.ts
+├── index.android.js
+└── sample // sample application
+```
+
+## Sample App
 
 ```
 cd sample
 tns install
 tns platform add [ios | android]
-tns run [ios | android]
-```
-
-### After the first time
-
-```
-cd sample
-tns plugin remove nativescript-webview-custom-header && tns plugin add ../
 tns run [ios | android]
 ```
