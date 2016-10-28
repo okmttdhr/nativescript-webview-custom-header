@@ -1,21 +1,27 @@
-import {Component} from "@angular/core";
+import {Component, ViewChild, ElementRef} from "@angular/core";
+import { Page } from "ui/page";
+import { WebView } from "ui/web-view";
+import { GridLayout } from "ui/layouts/grid-layout";
+import { WebViewHelper } from "nativescript-webview-custom-header";
 
 @Component({
     selector: "my-app",
     templateUrl: "app.component.html",
 })
 export class AppComponent {
-    public counter: number = 16;
+  @ViewChild("gridlayout") gridlayoutRef: ElementRef;
+  private gridlayout: GridLayout;
+  private webview: WebView;
+  constructor(page: Page) {
+    page.actionBarHidden = true;
+  }
+  ngOnInit() {
+    this.webview = new WebView();
+    this.webview.id = "webview";
+    this.webview.src = "https://docs.nativescript.org/";
+    WebViewHelper.initWithIntercept(this.webview);
 
-    public get message(): string {
-        if (this.counter > 0) {
-            return this.counter + " taps left";
-        } else {
-            return "Hoorraaay! \nYou are ready to start building!";
-        }
-    }
-    
-    public onTap() {
-        this.counter--;
-    }
+    this.gridlayout = this.gridlayoutRef.nativeElement;
+    this.gridlayout.addChild(this.webview);
+  }
 }
