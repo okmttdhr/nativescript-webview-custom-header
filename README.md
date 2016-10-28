@@ -22,3 +22,5 @@ tns install
 tns platform add [ios | android]
 tns run [ios | android]
 ```
+
+Now, you can see your customized headers using Safari on iOS, Chrome on Android.
