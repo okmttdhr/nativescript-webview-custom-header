@@ -15,6 +15,6 @@ tns run [ios | android]
 
 ```
 cd sample
-tns plugin remove nativescript-repro && tns plugin add ../
+tns plugin remove nativescript-webview-custom-header && tns plugin add ../
 tns run [ios | android]
 ```
