@@ -1,6 +1,6 @@
 # nativescript-webview-custom-header
 
-This is the example of implementating custom headers for WebView requests.
+This is the example implementing custom headers for WebView requests.
 
 (I used [alexziskind1/nativescript-oauth](https://github.com/alexziskind1/nativescript-oauth) as reference).
 
